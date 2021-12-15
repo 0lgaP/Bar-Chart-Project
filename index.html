@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="stylesheet" href="stylesheet.css">
-  <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="main.js"></script>
   <style src="stylesheet.css"></style>
   <meta charset="UTF-8">
@@ -13,31 +12,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bar Chart Project</title>
 </head>
+
 <body>
   <header>
     <h1>Bar Chart Project</h1>
   </header>
   <div id="container">
-   <h1 id="heading1">Heading One</h1>
-   <p id="para1">I said come on Fhqwgads, come on <span>Everybody to the limit</span> , 
-    the cheat is to the limit come on everybody fhqwgads!</p>
+    <h1 id="heading1">Heading One</h1>
+    <p id="para1">I said come on Fhqwgads, come on <span>Everybody to the limit</span> ,
+      the cheat is to the limit come on everybody fhqwgads!</p>
     <h1 class="heading2">Heading Two</h1>
-    <p class="para2">Come on fhqwhgads, <span>I see you jockin me</span> , 
+    <p class="para2">Come on fhqwhgads, <span>I see you jockin me</span> ,
       Try'n'a play like..You no me</p>
-    
+
     <div id="container">
       <h3>Mouse Events</h3>
       <button id="btn1" class="Butts1">Button 1</button>
       <button id="btn2">Button 2</button>
-
     </div>
-    <div id="square">
-
-    </div>
-
-      <h1 id='coords'></h1>
+    <!-- <div id="square"></div>
+    <h1 id='coords'></h1> -->
   </div>
-
-  
+  <div>
+    <form id='form'>
+      <label>Name</label>
+      <input type="text" id="name" name="name">
+      <br>
+      <label>Email</label>
+      <input type="email" id="email" name="email">
+      <br>
+      <label>Gender</label>
+      <br>
+      <select name="gender" id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="non-binary">Non Binary</option>
+      </select>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
 </body>
 </html>

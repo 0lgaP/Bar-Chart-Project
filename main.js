@@ -1,8 +1,15 @@
-// eslint-disable-next-line require-jsdoc
-// function multiply(a, b) {
-//   return a * b;
-// };
-// console.log(multiply(4, 6));
+// This must be at the top, otherwise the
+// jquery will execute before the page loads, loosing functionality
+
+$(document).ready(function() {
+  $('#form').submit(function(e) {
+    e.preventDefault();
+    const name = $('input#name').val();
+    console.log(name);
+  });
+});
+
+
 //  Jquery thangs
 // $('h1#heading1').hide() --> hides anything #=ID, .=class, none=tag
 // $('.heading2').hide()
@@ -29,11 +36,7 @@
 //       alert('Button Clicked!')
 //   });
 // });
-$(document).ready(function() {
-  $(document).on('mousemove', function(e) {
-    $('#coords').html('Coords: Y '+e.clientY+' X: '+e.clientX);
-  });
-});
+
 
 // $('#btn1').click(function(){
 //     alert('Button Clicked!')
@@ -64,4 +67,28 @@ $(document).ready(function() {
 //     alert(e.currentTarget.innerHTML)
 //     alert(e.currentTarget.outerHTML)
 //     alert(e.currentTarget.className)
+// });
+// $(document).on('mousemove', function(e) {
+//   $('#coords').html('Coords: Y '+e.clientY+' X: '+e.clientX);
+// }); --> this alows for the track& display of mouse
+// coordinants while mouse is moving on the page
+
+
+
+// How to set up a change in background colour when input is selected
+// Then log the email/name that is being typed
+// $('input').focus(function() {
+//   $(this).css('background', 'green');
+// });
+// $('input').blur(function() {
+//   $(this).css('background', '#f4f4f4');
+// });
+// $('input').keyup(function(e) {
+//   console.log(e.target.value);
+// });
+
+
+// This code displays via alert the selection chosen by the user
+// $('select#gender').change(function(e) {
+//   alert(e.target.value);
 // });
