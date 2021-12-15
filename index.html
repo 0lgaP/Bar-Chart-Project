@@ -1,5 +1,27 @@
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="stylesheet.css">
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+      // $('#btn1').click(function(){
+      //     alert('Button Clicked!')
+      // });
+      $('#btn1').on('click', function(){
+        // $('#para1').hide()
+        $('')
+      })
+      $('#btn2').on('click', function(){
+        $('#para1').show()
+      })
+
+      
+    });
+
+  </script>
   <script src="main.js"></script>
   <style src="stylesheet.css"></style>
   <meta charset="UTF-8">
@@ -8,6 +30,26 @@
   <title>Bar Chart Project</title>
 </head>
 <body>
-  <header><H1>Bar Chart Project</H1></header>
+  <header>
+    <h1>Bar Chart Project</h1>
+  </header>
+  <div id="container">
+   <h1 id="heading1">Heading One</h1>
+   <p id="para1">I said come on Fhqwgads, come on <span>Everybody to the limit</span> , 
+    the cheat is to the limit come on everybody fhqwgads!</p>
+    <h1 class="heading2">Heading Two</h1>
+    <p class="para2">Come on fhqwhgads, <span>I see you jockin me</span> , 
+      Try'n'a play like..You no me</p>
+    
+    <div id="container">
+      <h3>Mouse Events</h3>
+      <button id="btn1">Button 1</button>
+      <button id="btn2">Button 2</button>
+
+    </div>
+      
+  </div>
+
+  
 </body>
 </html>
