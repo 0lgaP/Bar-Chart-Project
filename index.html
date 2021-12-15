@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <link rel="stylesheet" href="stylesheet.css">
@@ -5,23 +6,6 @@
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
-  <script>
-    $(document).ready(function(){
-      // $('#btn1').click(function(){
-      //     alert('Button Clicked!')
-      // });
-      $('#btn1').on('click', function(){
-        // $('#para1').hide()
-        $('')
-      })
-      $('#btn2').on('click', function(){
-        $('#para1').show()
-      })
-
-      
-    });
-
-  </script>
   <script src="main.js"></script>
   <style src="stylesheet.css"></style>
   <meta charset="UTF-8">
@@ -43,11 +27,15 @@
     
     <div id="container">
       <h3>Mouse Events</h3>
-      <button id="btn1">Button 1</button>
+      <button id="btn1" class="Butts1">Button 1</button>
       <button id="btn2">Button 2</button>
 
     </div>
-      
+    <div id="square">
+
+    </div>
+
+      <h1 id='coords'></h1>
   </div>
 
   

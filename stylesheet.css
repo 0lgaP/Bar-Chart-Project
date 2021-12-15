@@ -21,3 +21,8 @@ header{
   margin: auto;
   padding: 10px;
 }
+#square{
+  width: 80px;
+  height: 80px;
+  background-color: blueviolet;
+}

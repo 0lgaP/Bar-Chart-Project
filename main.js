@@ -1,8 +1,8 @@
 // eslint-disable-next-line require-jsdoc
-function multiply(a, b) {
-  return a * b;
-};
-console.log(multiply(4, 6));
+// function multiply(a, b) {
+//   return a * b;
+// };
+// console.log(multiply(4, 6));
 //  Jquery thangs
 // $('h1#heading1').hide() --> hides anything #=ID, .=class, none=tag
 // $('.heading2').hide()
@@ -28,4 +28,40 @@ console.log(multiply(4, 6));
 //   $('#btn1').click(function(){
 //       alert('Button Clicked!')
 //   });
+// });
+$(document).ready(function() {
+  $(document).on('mousemove', function(e) {
+    $('#coords').html('Coords: Y '+e.clientY+' X: '+e.clientX);
+  });
+});
+
+// $('#btn1').click(function(){
+//     alert('Button Clicked!')
+// });
+// $('#btn1').on('click', function(){
+//   // $('#para1').hide()
+//   $('#para1').toggle()
+// })
+// $('#btn2').on('click', function(){
+//   $('#para1').show()
+// })
+// $('#btn1').dblclick(function(){
+//   $('#para1').toggle();
+// })
+// $('#btn1').hover(function(){
+//   $('#para1').toggle();
+// });
+// . hover is a combo of 'mouseenter' & 'mouseleave'
+// u can even use 'mousemove'
+// $('#btn1').on('mousedown', function(){
+//   $('#para1').toggle();
+// });
+// $('#btn1').on('mouseup', function(){
+//   $('#para1').toggle();
+// });
+// $('#btn1').click(function(e){
+//     alert(e.currentTarget.id)
+//     alert(e.currentTarget.innerHTML)
+//     alert(e.currentTarget.outerHTML)
+//     alert(e.currentTarget.className)
 // });
