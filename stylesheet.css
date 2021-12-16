@@ -26,3 +26,14 @@ header{
   height: 80px;
   background-color: blueviolet;
 }
+.myClass{
+  color: black;
+  background-color: black;
+}
+
+#myDiv{
+  background-color: rgb(19, 163, 31);
+  height: auto;
+  max-width: max-content;
+  color: rgb(233, 211, 17);
+}
