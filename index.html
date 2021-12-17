@@ -12,67 +12,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bar Chart Project</title>
 </head>
+  <body>
+    <header>
+      <h1>Bar Chart Project</h1>
+    </header>
+      <div id="container">
+        <hr>
+        <button id="submit">Submit my array</button>
+        <input type="text" id="arrValues">
+        <hr>
+        <button id="makeGraph">Make Graph</button>
+      </div>
+      <div id="bar">
 
-<body>
-  <header>
-    <h1>Bar Chart Project</h1>
-  </header>
-  <div id="myDiv"></div>
-
-  <div id="container">
-    <h1 id="heading1">Heading One</h1>
-    <p id="para1">I said come on Fhqwgads, come on <span>Everybody to the limit</span> ,
-      the cheat is to the limit come on everybody fhqwgads!</p>
-    <h1 class="heading2">Heading Two</h1>
-    <p class="para2">Come on fhqwhgads, <span>I see you jockin me</span> ,
-      Try'n'a play like..You no me</p>
-
-    <div id="container">
-      <h3>Mouse Events</h3>
-      <button id="btn1" class="Butts1">Button 1</button>
-      <p class="para1">Shake the juice and see what comes loose</p>
-      <p class="para2">No one understand me, Noone understands me...but YOU</p>
-      
-      <button id="btn2">Button 2</button>
-    </div>
- 
-  </div>
-  <div>
-    <form id='form'>
-      <label>Name</label>
-      <input type="text" id="name" name="name">
-      <br>
-      <label>Email</label>
-      <input type="email" id="email" name="email">
-      <br>
-      <label>Gender</label>
-      <br>
-      <select name="gender" id="gender">
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="non-binary">Non Binary</option>
-      </select>
-      <br>
-      <input type="text" id="newItem" value="Add">
-    </form>
-    <ul id="list">
-      <li>Come On</li>
-      <li>Come On</li>
-      <li>Come On</li>
-      <li>Come On</li>
-      <li>Come On</li>
-    </ul>
-    <a href="http://google.com">Google</a>
-    <ul id="users"></ul>
-  </div>
-
+      </div>
+ <a href="http://jsfiddle.net/10dovahx/1/" target="_isblank">Animated bars</a>
 <script>
   $(document).ready(function() {
-    var newArr = $('ul#list li').toArray();
-    $.each(newArr, function(i, val){
-      console.log(val.innerHTML)
+    var x = [];
+    $('#submit').on('click', function(){
+      console.log("Clicked")
+      var data = $('#arrValues').val();
+      if(isNaN(parseInt(data, 10))){
+        alert("Please only use numerals")
+      } else {
+        var array = JSON.parse("["+data+"]");
+        x.push(array);
+        console.log(x)
+      };
+    $('#makeGraph').on('click', function() {
+      for (let i = 0; i < x.length; i++){
+        var bars = $("<span>").html(x[i]);
+          bars.css({
+            "display": "block",
+            "width": "0px",
+            "background-colour": "#333",
+            "marginBottom": "5px",
+            "padding": "2px",
+            "color": "#fff"
+          });
+
+          $('#bar').append(bars);
+          
+      }
+        
+        
+      })
     })
   });
+  
 
 </script>
 </body>

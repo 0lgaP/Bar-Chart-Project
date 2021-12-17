@@ -35,5 +35,24 @@ header{
   background-color: rgb(19, 163, 31);
   height: auto;
   max-width: max-content;
-  color: rgb(233, 211, 17);
+  color: rgb(10, 10, 10);
+}
+#box{
+  background: #333;
+  color: #fff;
+  width: 500px;
+  height: 90px;
+  padding: 40px;
+  text-align: center;
+}
+#btnStop{
+  background-color: blueviolet;
+  border-color: blueviolet;
+  border-radius: 5px;
+}
+#box2{
+  background: red;
+  width: 100px;
+  height: 100px;
+  position: relative;
 }
