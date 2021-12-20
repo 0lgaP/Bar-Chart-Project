@@ -23,13 +23,16 @@
         <hr>
         <button id="makeGraph">Make Graph</button>
       </div>
-      <div id="bar">
+      <div id="backdrop">
+        <div id="bars"></div>
 
       </div>
  <a href="http://jsfiddle.net/10dovahx/1/" target="_isblank">Animated bars</a>
 <script>
   $(document).ready(function() {
-    var x = [];
+    
+    const x = [];
+    let len = 0;
     $('#submit').on('click', function(){
       console.log("Clicked")
       var data = $('#arrValues').val();
@@ -38,29 +41,34 @@
       } else {
         var array = JSON.parse("["+data+"]");
         x.push(array);
-        console.log(x)
+        len += array.length;
+        console.log(x);
+        console.log(len);
       };
-    $('#makeGraph').on('click', function() {
-      for (let i = 0; i < x.length; i++){
-        var bars = $("<span>").html(x[i]);
-          bars.css({
-            "display": "block",
-            "width": "0px",
-            "background-colour": "#333",
-            "marginBottom": "5px",
-            "padding": "2px",
-            "color": "#fff"
-          });
-
-          $('#bar').append(bars);
-          
-      }
-        
-        
-      })
-    })
+    });
+    
+    $('#makeGraph').on('click', function(){
+     var array1 = x.sort();
+     var maxValue = array1[0];
+     for (let i=0; i< len; i++){
+       maxValue = Math.max(maxValue, array1[i])
+     
+     for (let j=0; j<len; j++){
+       var newBar = $('<div>').html(array1[j]);
+        newBar.css({
+          'hight': '0px',
+          'opacity': '0.5'
+        })
+        $('#bars').append(newBar)
+     }
+     newBar.animate({
+       'width': (100 * array1[i] / maxValue) + '%'
+     }, 3000)
+     }
+    });
   });
   
+  // 44, 56, 77, 89, 22
 
 </script>
 </body>
