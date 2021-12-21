@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $('#fishBod').hide();
   const x = [];
   let len = 0;
   $('#submit').on('click', function() {
@@ -12,9 +13,14 @@ $(document).ready(function() {
       len += array.length;
       console.log(x);
       console.log(len);
+      $('#submit').text('Success!');
     };
   });
   $('#makeGraph').on('click', function() {
+    $('#buttonDiv').animate({
+      left: 300,
+    }, 1000);
+    $('#fishBod').show();
     const array = JSON.parse('[' + x + ']');
     let total = 0;
     // eslint-disable-next-line guard-for-in

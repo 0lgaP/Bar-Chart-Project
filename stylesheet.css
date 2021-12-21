@@ -16,20 +16,34 @@ header{
   border-bottom: 4px #000 solid;
   margin-bottom: 10px;
 }
+#containerButton{
+  width: 100%;
+  text-align: center;
+  background-color: hotpink;
+
+}
 
 #buttonDiv{
   background-color: rgb(209, 212, 12);
-  height: auto;
-  max-width: max-content;
-  padding: 10px;
-  color: rgb(10, 10, 10);
-  border-radius: 10px;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 3px;
+  
+  /* max-width: fit-content;
+  width: fit-content;
+  margin: auto;
+  padding: 15px;
+  border-radius: 50%;
+  text-align: center;
+  align-items: center;
+  overflow: hidden; */
   
 }
-.makeGraph{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#makeGraph{
+  margin: 0;
+  
+
+ 
 }
 #fishBod {
   position: relative;
@@ -55,4 +69,21 @@ header{
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   max-height: 100%;
+}
+
+#eyeContainer{
+  display: flex;
+  justify-content: center;
+}
+#circle1, #circle2{
+  border-radius: 50%;
+  width: 50px;
+  height: flex;
+  display: flex;
+  justify-content: center;
+  
+  
+}
+img{
+  width: 40px;
 }
