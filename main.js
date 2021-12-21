@@ -1,7 +1,73 @@
 $(document).ready(function() {
+  const x = [];
+  let len = 0;
+  $('#submit').on('click', function() {
+    console.log('Clicked');
+    const data = $('#arrValues').val();
+    if (isNaN(parseInt(data, 10))) {
+      alert('Please only use numerals');
+    } else {
+      const array = JSON.parse('[' + data + ']');
+      x.push(array);
+      len += array.length;
+      console.log(x);
+      console.log(len);
+    };
+  });
+  $('#makeGraph').on('click', function() {
+    const array = JSON.parse('[' + x + ']');
+    let total = 0;
+    // eslint-disable-next-line guard-for-in
+    for (const j in array) {
+      total += array[j];
+    };
+    console.log(total);
+    // eslint-disable-next-line guard-for-in
+    for (const i in array) {
+      console.log(array[i]);
+      const val = Math.floor((array[i] / total) * 100);
+      const width = 20;
+      const gap = 15;
 
+      $('#container').append(
+          $('<div />').addClass('bar').css({
+            width: width,
+            height: val,
+            left: (width + gap) * i + gap,
+          }));
+    };
+  });
 });
+// 44, 56, 77, 89, 22
 
+/*
+ const textBar = x[i];
+      const elem = document.createElement('div');
+      const elemText = document.createTextNode(textBar);
+      elem.appendChild(elemText);
+      elem.setAttribute()
+      document.body.appendChild(elem);
+*/
+// $('#makeGraph').on('click', function() {
+//   const array1 = x.sort();
+//   let maxValue = array1[0];
+//   let newBar;
+//   for (let i = 0; i < len; i++) {
+//     maxValue = Math.max(maxValue, array1[i]);
+
+//     for (let j = 0; j < len; j++) {
+//       newBar = $('<div>').html(array1[j]);
+//       newBar.css({
+//         'hight': '0px',
+//         'opacity': '0.5',
+//       });
+//       $('#bars').append(newBar);
+//     }
+//     newBar.animate({
+//       'width': (100 * array1[i] / maxValue) + '%'}, 3000);
+//   }
+// });
+// $('<div class="eachBar" />').text(x[i]).appendTo('#backdrop');
 /*
 ******************************************************
 ------------------------------------------------------
@@ -321,7 +387,7 @@ var spanElement = document.createElement('span');
 ------------------------------------------------------
 ******************************************************
 ------------------------------------------------------
-Functionality of BArChartProject
+Functionality of BarChartProject
 ------------------------------------------------------
 ******************************************************
 ------------------------------------------------------
@@ -343,5 +409,25 @@ var x = [];
 ------------------------------------------------------
 ******************************************************
 ------------------------------------------------------
+$('#id').text()
+------------------------------------------------------
+set text:
+$('#id).text("text")
+get text
+let aquiredText = $('#id).text();
+console.log(aquiredText)
+------------------------------------------------------
+******************************************************
+------------------------------------------------------
+$('#id').append()
+------------------------------------------------------
+append
+$('#id').append('<p>Para 4</p>');
+appendTo
+$('<p>Para 4</p>').appendTo('#id');
+------------------------------------------------------
+******************************************************
+------------------------------------------------------
+
 ------------------------------------------------------
 */

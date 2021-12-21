@@ -3,73 +3,30 @@
 
 <head>
   <link rel="stylesheet" href="stylesheet.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="main.js"></script>
-  <style src="stylesheet.css"></style>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>Bar Chart Project</title>
 </head>
   <body>
     <header>
       <h1>Bar Chart Project</h1>
     </header>
-      <div id="container">
-        <hr>
+      <div id="buttonDiv">
         <button id="submit">Submit my array</button>
         <input type="text" id="arrValues">
         <hr>
         <button id="makeGraph">Make Graph</button>
       </div>
-      <div id="backdrop">
-        <div id="bars"></div>
-
+      <br>
+      <div id="fishBod">
+        <div id="container"></div>
       </div>
  <a href="http://jsfiddle.net/10dovahx/1/" target="_isblank">Animated bars</a>
-<script>
-  $(document).ready(function() {
-    
-    const x = [];
-    let len = 0;
-    $('#submit').on('click', function(){
-      console.log("Clicked")
-      var data = $('#arrValues').val();
-      if(isNaN(parseInt(data, 10))){
-        alert("Please only use numerals")
-      } else {
-        var array = JSON.parse("["+data+"]");
-        x.push(array);
-        len += array.length;
-        console.log(x);
-        console.log(len);
-      };
-    });
-    
-    $('#makeGraph').on('click', function(){
-     var array1 = x.sort();
-     var maxValue = array1[0];
-     for (let i=0; i< len; i++){
-       maxValue = Math.max(maxValue, array1[i])
-     
-     for (let j=0; j<len; j++){
-       var newBar = $('<div>').html(array1[j]);
-        newBar.css({
-          'hight': '0px',
-          'opacity': '0.5'
-        })
-        $('#bars').append(newBar)
-     }
-     newBar.animate({
-       'width': (100 * array1[i] / maxValue) + '%'
-     }, 3000)
-     }
-    });
-  });
-  
-  // 44, 56, 77, 89, 22
-
-</script>
 </body>
 </html>

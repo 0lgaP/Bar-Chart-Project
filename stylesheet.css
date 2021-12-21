@@ -16,60 +16,43 @@ header{
   border-bottom: 4px #000 solid;
   margin-bottom: 10px;
 }
-#container{
-  width: 90%;
-  margin: auto;
-  padding: 10px;
-}
-#square{
-  width: 80px;
-  height: 80px;
-  background-color: blueviolet;
-}
-.myClass{
-  color: black;
-  background-color: black;
-}
 
-#myDiv{
-  background-color: rgb(19, 163, 31);
+#buttonDiv{
+  background-color: rgb(209, 212, 12);
   height: auto;
   max-width: max-content;
-  color: rgb(10, 10, 10);
-}
-#box{
-  background: #333;
-  color: #fff;
-  width: 500px;
-  height: 90px;
-  padding: 40px;
-  text-align: center;
-}
-#btnStop{
-  background-color: blueviolet;
-  border-color: blueviolet;
-  border-radius: 5px;
-}
-#box2{
-  background: red;
-  width: 100px;
-  height: 100px;
-  position: relative;
-}
-#backdrop{
-  background-color: rgb(20, 105, 41);
-  margin: auto;
-  width:60%;
-  height: 200px;
   padding: 10px;
-  position: relative;
-
+  color: rgb(10, 10, 10);
+  border-radius: 10px;
+  
 }
-#bars{
+.makeGraph{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#fishBod {
+  position: relative;
+  height: 200px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px;
+  background-color: green;
+}
+#container {
+  position: bottom;
+  max-height: 200px;
+  padding: 10px;
+  margin: 10px;
+  background-color: green;
+}
+
+.bar {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -25px 0 0 -25px;
-  display: inline-flex;
-  background-color: bisque;
+  bottom: 10px;
+  padding-left: 10px;
+  background-color: rgb(224, 194, 57);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  max-height: 100%;
 }
